@@ -1,0 +1,20 @@
+	 start 101
+	 read n
+	 mover breg,one
+	 movem breg,term
+again: 	 mult breg,term
+	 add creg,one
+	 movem creg,term
+	 comp creg,four
+	 bc le,again
+	 div breg,two
+	 movem breg,result
+	 print result
+	 stop
+n ds 2
+result ds 2
+one dc '1'
+term ds 1
+two dc '2'
+four dc '4
+end
